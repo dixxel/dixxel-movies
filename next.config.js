@@ -15,6 +15,18 @@ module.exports = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'imagedelivery.net',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
