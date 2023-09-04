@@ -95,7 +95,7 @@ export interface Season {
   name: string;
   overview: string;
   poster_path: string;
-  seasion_number: number;
+  season_number: number;
   vote_average: number;
 }
 
@@ -139,4 +139,50 @@ export interface ImageResponse {
   id: number;
   logos: Image[];
   posters: Image[];
+}
+
+export interface Role {
+  credit_id: number;
+  character: string;
+  episode_count: number;
+}
+
+export interface Job {
+  credit_id: number;
+  job: string;
+  episode_count: number;
+}
+
+export interface Cast {
+  adult: boolean;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string;
+  roles: Role[];
+  total_episode_count: number;
+  order: number;
+}
+
+export interface Crew {
+  adult: boolean;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string;
+  jobs: Job[];
+  total_episode_count: number;
+  department: number;
+}
+
+export interface CreditsResponse {
+  cast: Cast[];
+  crew: Crew[];
+  id: number;
 }

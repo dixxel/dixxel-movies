@@ -6,6 +6,7 @@ import { tmdbFetch } from '@/lib/tmdb';
 import Link from 'next/link';
 import { BaseResponse, BaseResults } from '@/types/tmdb';
 import Navbar from '@/components/Navbar';
+import Cookie from '@/components/Cookie';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
@@ -43,6 +44,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
             <Navbar />
             {children}
           </main>
+          <Cookie />
         </body>
       </html>
     </ClerkProvider>
